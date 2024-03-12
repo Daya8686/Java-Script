@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first{
+            height: 200px;
+            width: 200px;
+            background-color: lightcoral;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="first"></div>
+</body>
+</html>
+
+<!-- Now we are doing in the addEventListiner manner 
+where we take or selct any div from html with id,class or tag then we are gona hit the eventListiner with method 
+this can be done with event like onClick, ondblclick,mouseenter,mouseleave,.. etc and a function name 
+so it will slect the html code with selectors and then by action it will hit an event and then functions is called-->
+
+<script>
+    document.querySelector("#first").addEventListener("mouseenter", colorChangeFun);
+    document.querySelector("#first").addEventListener("mouseleave", defaultChangeFun);
+    function colorChangeFun(){
+        document.querySelector("#first").style="background-color: lightblue; cursor:pointer";
+    }
+    function defaultChangeFun(){
+        document.querySelector("#first").style="background-color:lightcoral"
+    }
+</script>

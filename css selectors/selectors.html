@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <style>
+        *{
+            color: blue;
+        }
+        p{
+            color: brown;
+        }
+        .classSelector{
+            color: pink;
+        }
+        #newId{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- There are 4 types of selectors in CSS
+    1.Universal Selector (*)
+    2.Tag Selector (<tag>)
+    3.Class selector (.classname)
+    4. Id Selector (#Id) -->
+
+    <!-- In this there is a periority
+    ID>Class>Tag>*
+    Id has higher periority
+    Class has higher perioty and less then Id
+    tag has higher periority and less then class and Id
+    Universal(*) has less periority then all -->
+
+    <div>
+        <p class="classSelector"; id="newId">Hello world</p>
+        <p class="classSelector" >Hello all</p>
+        <p>Bye all</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./Common.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="topbar">
+        <li>
+            <ul> <a href="./index.html">
+                Rebook
+            </a>
+            </ul>
+        </li>
+        <li>
+            <ul><a id="men" href="">Men</a></ul>
+            <ul><a id="women" href="">Women</a></ul>
+            <ul><a href="./Login.html">Login</a></ul>
+            <ul><a href="./Sigin.html">Sigin</a></ul>
+        </li>
+        
+    </div>
+    <div id="centerText">
+        <!-- <img id="backImg" src="https://st4.depositphotos.com/1688079/20558/i/450/depositphotos_205581292-stock-photo-commerce-isolated-blue-background-abstract.jpg" alt=""> -->
+        <p>Welcome to E-Commerce</p>
+        <p>Best Shopping site in world</p>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#men").addEventListener("click",menAccessFun);
+        document.querySelector("#women").addEventListener("click",womenAccessFun);
+       function menAccessFun(){
+        let access=JSON.parse(localStorage.getItem("authentication"));
+        console.log(access);
+        let menAncar=document.querySelector("#men");
+        if(access){
+        
+                menAncar.setAttribute("href","men.html")
+        }
+        else{
+            menAncar.setAttribute("href","Login.html")
+        }
+       }
+
+       function womenAccessFun(){
+        let access=JSON.parse(localStorage.getItem("authentication"));
+        console.log(access);
+        let womenAncar=document.querySelector("#women");
+        if(access){
+        
+            womenAncar.setAttribute("href","women.html")
+        }
+        else{
+            womenAncar.setAttribute("href","Login.html")
+        }
+       }
+</script>

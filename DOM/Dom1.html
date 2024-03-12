@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Caluclater</title>
+</head>
+<body>
+    <input type="number" name="value 1" id="1" placeholder="enter number">
+    <input type="number" name="value 2" id="2" placeholder="enter number">
+    
+    <button onclick="add()">Add</button>
+    <button onclick="multi()">multiply</button>
+    <button onclick="substract()">substract</button>
+    <button onclick="div()">divide</button>
+    
+</body>
+</html>
+
+<script>
+    function add(){
+        let num1=document.getElementById("1").value;
+        let num2=document.getElementById("2").value;
+        let add=Number(num1)+Number(num2);
+       alert(add);
+    }
+    function multi(){
+        let num1=document.getElementById("1").value;
+        let num2=document.getElementById("2").value;
+        let mul=Number(num1)*Number(num2);
+        alert(mul);
+    }
+    function substract(){
+        let num1=document.getElementById("1").value;
+        let num2=document.getElementById("2").value;
+        let sub=Number(num1)-Number(num2);
+        alert(sub);
+    }
+    function div(){
+        let num1=document.getElementById("1").value;
+        let num2=document.getElementById("2").value;
+        let d=Number(num1)/Number(num2);
+        alert(d);
+    }
+</script>

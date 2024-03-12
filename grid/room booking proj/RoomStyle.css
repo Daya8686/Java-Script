@@ -1,0 +1,92 @@
+.outerbox{
+    height: 630px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 20px; */
+    margin-top: 150px;
+}
+.textin > h1{
+    height: 75px;
+    width: 100%;
+    /* border: 1px solid rgb(206, 45, 31); */
+    font-family: "Playfair Display", times, serif;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    color: #c78b36;
+    margin: 0px;
+}
+.disin{
+    height: 100px;
+    width: 720px;
+    /* border: 1px solid coral; */
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: "Roboto", arial, sans-serif;
+    color: #6c757d;
+}
+.imagein{
+    margin-top: 75px;
+    height:400px;
+    width: 1240px;
+    /* border: 1px solid salmon ; */
+    display: flex;
+    justify-content: space-between;
+}
+.onebox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 375px;
+    width: 390px;
+    /* border: 1px solid darkslateblue; */
+}
+
+.image{
+    height: 250px;
+    width: 390px;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    
+    
+}
+.image > img {
+    height: 250px;
+    width: 390px;
+    transition: transform .5s,filter 1.5s ease-in-out;
+}
+
+.image > img:hover{
+    height: 250px;
+    width: 390px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.roomName{
+    font-family: "Playfair Display", times, serif;
+    font-size: 35px;
+    font-weight: 100;
+    margin:0px;
+    margin-top: 25px;
+}
+.price > p{
+    font-family: "Roboto", arial, sans-serif;
+    color: #f5bb69;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 0px;
+    margin: 10px;
+    
+    
+}
+.price > p:hover{
+    
+    color: #f49f29;
+    
+    
+}

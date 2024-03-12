@@ -1,0 +1,48 @@
+#tableHeading{
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+}
+table,th,tr {
+    border: 1px solid black ;
+    border-collapse: collapse;
+    padding: 20px;
+    font-size: 25px;
+}
+thead{
+    background-color: rgb(154, 236, 236);
+}
+td{
+    border: 1px solid black ;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+select{
+    font-size: 25px;
+    width: 100px;
+    border-radius: 25px;
+
+}
+#sortingBar{
+    /* display: flex; */
+    display: flex;
+    
+}
+#sortingBar > div:nth-child(3){
+    /* display: flex; */
+    display: flex;
+    height: 20px;
+    margin: auto;
+    
+}
+
+#sortingBar > div:nth-child(3) > button{
+    /* display: flex; */
+    margin: 10px;
+    height: 25px;
+    padding: 2px;
+    
+}
+
+

@@ -1,0 +1,21 @@
+#tableHeading{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+ }
+ table,th,tr {
+     border: 1px solid black ;
+     border-collapse: collapse;
+     padding: 20px;
+     font-size: 25px;
+ }
+ thead{
+     background-color: rgb(155, 236, 154);
+ }
+ td{
+     border: 1px solid black ;
+     border-collapse: collapse;
+     text-align: center;
+ }
+ 
+ 

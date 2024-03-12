@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="stylesheet" href="./calculater.css">
+</head>
+<body>
+    <div class="outer">
+    <div id="values"></div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div class="plussymbol">+</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div class="minussymbol">-</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div class="intosymbol">x</div>
+    <div class="c">C</div>
+    <div>0</div>
+    <div class="equalsymbol">=</div>
+    <div class="divsymbol">/</div>
+    </div>
+</body>
+</html>
+<script>
+    let keyset=document.querySelectorAll(".outer > div");
+    console.log(keyset);
+
+    for(let i=0;i<keyset.length;i++){
+        keyset[i].addEventListener("click",myCalcFunction)
+    }
+    let bag="";
+    function myCalcFunction(){
+        let val=event.target.innerText;
+        console.log(typeof(val));
+        if(val==""){
+
+        }
+        else{
+            if(val=="C"){
+                bag="";
+                document.querySelector("#values").innerText=bag;
+            }
+            else if(val=="="){
+                let res=eval(bag);
+                document.querySelector("#values").innerText=res;
+            }
+            else{
+                bag=bag+val;
+                document.querySelector("#values").innerText=bag;
+            }
+        }
+    }
+</script>

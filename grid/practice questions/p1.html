@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="fname">Daya</h1>
+    <div id="lname">sagar</div>
+    <p id="loct">Armoor</p>
+    <hr>
+    <p id="text">Text here</p>
+    <hr>
+    <button onclick="firstname()">firstname</button>
+    <button onclick="firstnameAndlastname()">firstname+lastname</button>
+    <button onclick="lastname()">lastname</button>
+    <button onclick="locationFun()">location</button>
+</body>
+</html>
+
+<script>
+    function firstname(){
+        let fname=document.getElementById("fname").innerText;
+        document.getElementById("text").innerText=fname;
+    }
+    function lastname(){
+        let lname=document.getElementById("lname").innerText;
+        document.getElementById("text").innerText=lname;
+    }
+    function firstnameAndlastname(){
+        let fname=document.getElementById("fname").innerText;
+        let lname=document.getElementById("lname").innerText;
+        let name= fname+lname;
+        document.getElementById("text").innerText=name;
+    }
+    function locationFun(){
+        let loc=document.getElementById("loct").innerText;
+        document.getElementById("text").innerText=loc;
+    }
+</script>

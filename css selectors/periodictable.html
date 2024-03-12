@@ -1,0 +1,344 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=\, initial-scale=1.0">
+        <title>periodic table</title>
+        <style>
+            .outer{
+                height: 800px;
+                border: 1px solid black;
+                width: 100%;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                
+                
+            }
+            h1{
+                font-weight: 200;
+                font-family:  Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                padding-top: 30px;
+            }
+            .wholebox{
+                height: 500px;
+                border: 1px solid green;
+                display: flex;
+            }
+            .leftside{
+                height: 500px;
+                width: 250px;
+                display: flex;
+                justify-content: space-evenly;
+                
+            }
+            .leftside > div{
+                width: 55px;
+                /* border: 1px solid pink; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            #left1bar{
+                height: 500px;
+            }
+            #left2bar{
+                margin-top: 70px;
+                height: 430px; 
+            }
+            #left3bar{
+                margin-top: 350px;
+                height: 148px;
+            }
+            
+            #left1bar > div{
+                background-color: rgb(117, 147, 65);
+            }
+            #left2bar > div{
+                background-color: rgb(231, 105, 91);
+            }
+            #left3bar > div{
+                height: 45px;
+                width: 45px;
+                background-color: rgb(243, 231, 215);
+                border: 6px solid black;
+            }
+            div[id$=bar] > div{
+                height: 48px;
+                width: 52px;
+                border: 3px solid black; 
+                
+            }
+            #left1bar > div:first-child{
+                background-color: rgb(163, 36, 36);
+            }
+            /* div[class$=side]{
+                border: 1px red solid;
+            } */
+            .silicon{
+                border: 3px solid black;
+                height: 150px;
+                width: 150px;
+                background-color: rgb(117, 147, 65);
+                margin-top: 35px;
+            }
+            .silicon > p{
+                font-size: 25px;
+                display: flex;
+                justify-content: end;
+                margin: 0;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .silicon>p:nth-child(2){
+                font-size: 70px;
+                display: flex;
+                justify-content: start;
+            }
+            .silicon > p:nth-child(3){
+                font-size: 30px;
+                display: flex;
+                justify-content: start;
+            }
+            .centerside{
+                height: 500px;
+                width: 700px;
+            }
+            .centerside> .boxes{
+                display: grid;
+                grid-template-columns: repeat(9,1.5fr);
+                grid-template-rows: repeat(4,1fr);
+                row-gap: 16px;
+                padding-top: 35px;
+                padding-left: 10px;
+                
+            }
+            .boxes > div{
+                height: 48px;
+                width: 52px;
+                border: 3px solid black;
+                background-color: blue;
+                
+            }
+            .rightside{
+                height: 500px;
+                width: 480px;  
+                display: flex;
+                
+                
+            }
+            .right1side{
+                height: 400px;
+                width:380px;
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                grid-template-rows: repeat(6,0fr);
+                margin-top: 84.5px;
+                row-gap: 16px;
+                margin-bottom: 15.5px;
+            
+                
+                
+                
+            }
+            .right1side > div{
+                height: 48px;
+                width: 52px;
+                border: 3px solid black;   
+                
+            }
+            .right2side{
+                height: 500px;
+                width: 55px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                
+                
+                
+            }
+            .right2side > div{
+                height: 48px;
+                width: 52px;
+                border: 3px solid black;   
+                margin-bottom: 1px;
+                background-color: #FFCC00;
+                
+            }
+            .lower{
+                height: 105px;
+                width: 680px;
+                margin-left: 400px;
+                display: grid;
+                grid-template-columns: repeat(14,0fr);
+                grid-template-rows: repeat(2,0fr);
+            }
+            .lower > div{
+                height: 48px;
+                width: 45px;
+                border: 1px solid black;   
+                border-collapse: collapse;
+            }
+        
+            .color1 ~ div{
+                background-color: #47582E;
+            }
+            .color2 ~ div{
+                background-color: #95BC5F;
+            }
+            .color1{
+                background-color: #47582E;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+        <div><h1>THE PEROIDIC TABLE OF ELEMENYTS</h1></div>
+        <div class="wholebox">
+            <div class="leftside">
+                <div id="left1bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="left2bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="left3bar">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="centerside">
+            <div class="silicon"><p>14</p> <p>Si</p> <p>silicon</p></div>
+            <div class="boxes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+            </div>
+            <div class="rightside">
+            <div class="right1side">
+                <div style="background-color: #AA0087;"></div>
+                <div style="background-color: #5AA02C;"></div>
+                <div style="background-color: #5AA02C;"></div>
+                <div style="background-color: #5AA02C;"></div>
+                <div style="background-color: #FF0066;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #AA0087;"></div>
+                <div style="background-color: #5AA02C;"></div>
+                <div style="background-color: #5AA02C;"></div>
+                <div style="background-color: #FF0066;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #AA0087;"></div>
+                <div style="background-color: #AA0087;"></div>
+                <div style="background-color: #FF0066;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #AA0087;"></div>
+                <div style="background-color: #AA0087;"></div>
+                <div style="background-color: #FF0066;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #FF6600;"></div>
+                <div style="background-color: #AA0087;"></div>
+                <div style="background-color: #FF0066;"></div>
+                <div style="background-color: #6D535E;"></div>
+                <div style="background-color: #6D535E;"></div>
+                <div style="background-color: #6D535E;"></div>
+                <div style="background-color: #6D535E;"></div>
+                <div style="background-color: #6D535E;"></div>
+            </div>
+            <div class="right2side">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div style="background-color: #6D535E";></div>
+            
+            </div>
+        </div>
+        
+        </div>
+        <div class="lower">
+            <div class="color1"></div>
+            
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="color2"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> 
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    </body>
+    </html>

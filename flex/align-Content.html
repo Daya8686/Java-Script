@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using align content</title>
+    <style>
+        .adjust{
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: space-around;
+            /* align-item and align-content are same both play on cross axis when the flex-direction is set to row and 
+            when flex-diection changes then the align-item will play in main axis for using thus flex-context we need to use flex-wrap:wrap */
+            /* display:flex 
+                flex-direction:row (default) cross axis
+                flex-wrap:wrap;
+                justification-context:flex-start;--- main axis
+                */
+            /* justify-content: space-around; */
+            
+        }
+        .adjust > div{
+            height: 100px;
+            width: 100px;
+        }
+        .adjust > div:nth-child(even){
+            background-color: lightcoral;
+        }
+        .adjust > div:nth-child(odd){
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="adjust">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>

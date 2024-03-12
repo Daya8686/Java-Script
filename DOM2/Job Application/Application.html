@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./Application.css">
+</head>
+<body>
+
+    
+
+    <div id="topBar">
+    
+        <li>
+         <ul><a href="./index.html"> Home</a></ul>
+         <ul><a href="./Application.html">Applied Job</a> </ul>
+         <ul><a href="./Bookmark.html">Bookmark</a> </ul>
+        </li> 
+     
+     </div>
+
+     
+     <div id="sortingBar">
+     <div >
+        <select name="Sorting" id="order" onchange="orderFunction()">
+            <option value=""> Sort</option>
+            <option value="HTL">Hight to low</option>
+            <option value="LTH">Low to high</option>
+        </select>
+        </div>
+        <div>
+        <select name="filtering" id="filtering" onchange="filterFunction()">
+            <option value=""> Filter by job code</option>
+            <option value="FSD">FSD</option>
+            <option value="BackEnd">Backend</option>
+            <option value="FrontEnd">Frontend</option>
+        </select>
+    </div>
+    <div >
+        <input type="text" id="searching" placeholder="Enter name to search">
+        <button id="searchBtn">Search</button>
+    </div>
+</div>
+
+     <div id="tableHeading">
+        <table>
+            <thead>
+        <tr>
+            <th>Person Name</th>
+            <th>Person Email</th>
+            <th>Job Role</th>
+            <th>Requested Salary</th>
+            <th>Remove</th>
+            <th>Bookmark</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    </table>
+     </div>
+    
+    
+</body>
+</html>
+<script>
+    let data = JSON.parse(localStorage.getItem("JobDetails"));
+
+    document.querySelector("#searchBtn").addEventListener("click", searchFun);
+  function  searchFun(){
+    document.querySelector("tbody").innerHTML="";
+          let searchVal=  document.querySelector("#searching").value;
+          let searchRes=searchVal.toLowerCase();
+          let sortData=data.filter(function(ele){
+          return  ele.pName.toLowerCase()==searchRes;
+          })
+          ApplicationFun(sortData);
+    }
+
+    function orderFunction(){
+        document.querySelector("tbody").innerHTML="";
+      let val=  document.querySelector("#order").value;
+      if(val==="HTL"){
+        data.sort(function(a,b){
+            return b.pSalary-a.pSalary;
+        })
+        ApplicationFun(data);
+        }
+        else{
+            data.sort(function(a,b){
+               
+                return a.pSalary-b.pSalary;
+            })
+            ApplicationFun(data);
+        }
+      }
+    
+
+  function filterFunction(){
+        document.querySelector("tbody").innerHTML="";
+        let val=document.querySelector("#filtering").value;
+        console.log(val);
+            let filtered=data.filter(function(element){
+                console.log(element.pJobName)
+                return element.pJobName==val;
+            })
+            console.log(filtered)
+            ApplicationFun(filtered);
+    }
+
+
+
+
+ApplicationFun(data);
+
+function ApplicationFun(data){
+    data.forEach(function(ele){
+            let tr=document.createElement("tr");
+            let td1=document.createElement("td");
+            let td2=document.createElement("td");
+            let td3=document.createElement("td");
+            let td4=document.createElement("td");
+            let td5=document.createElement("td");
+            let td6=document.createElement("td");
+            let td7=document.createElement("td");
+
+            td1.innerText=ele.pName;
+            td2.innerText=ele.pEmail;
+            td3.innerText=ele.pJobName;
+            td4.innerText=ele.pSalary;
+            td5.innerText="Delete";
+            td5.style="color: red;cursor:pointer";
+            td6.innerText="Bookmark!"
+            td6.style="color:green; cursor:pointer";
+            
+            tr.append(td1, td2, td3, td4, td5, td6);
+            document.querySelector("tbody").append(tr);
+            td5.addEventListener("click",deleteRow);
+            td6.addEventListener("click",bookMarking)
+
+        });
+    }
+       
+        function deleteRow(){
+            event.target.parentNode.remove();
+        //    let  parentElement = event.target.parentNode.rows.indexOf(parentElement);
+            
+        }
+        function bookMarking(){
+            let Barr=JSON.parse( localStorage.getItem("BookmarkData")) ||[];
+            console.log(event.target.parentNode.cells[0]);
+            // let obj=event.target.parentNode;
+            let obj={
+             BPname:event.target.parentNode.cells[0].innerText,
+             BPemail:event.target.parentNode.cells[1].innerText,
+             BPjobname:event.target.parentNode.cells[2].innerText,
+             BPsalary:event.target.parentNode.cells[3].innerText,
+            }
+            Barr.push(obj);
+            localStorage.setItem("BookmarkData", JSON.stringify(Barr));
+            deleteRow();
+        }
+        
+</script>

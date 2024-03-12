@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first{
+            height: 200px;
+            width: 200px;
+            background-color: lightcoral;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="first">This is the data written over her in div</div>
+</body>
+</html>
+<script>
+    document.querySelector("#first").addEventListener("click",newFun);
+    // This is for getting a event object as we see in the above line we are using addEventLisitener
+    // This addEventListiner will have a event object which has all the information about the html tag which we gonna hit from java Script
+    //from this object we can get the information what we requered from that object
+    // this object contains information with some more sub objects in it
+    //after an event like click,mouseenter..etc are are hit then this event get data about the targeted html code meta info
+    // we can use that info to print in a function or any console value or we can print the data any where in html
+
+    function newFun(){
+        console.log(event); //this is a event object 
+        console.log(event.target) //this will give the html code on which event is generated
+        console.log(event.target.innerText) //this will print the data inside a html tag
+    }
+</script>

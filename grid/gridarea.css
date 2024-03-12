@@ -1,0 +1,53 @@
+.gridusing{
+    height: 500px;
+    width: 500px;
+    padding: 50px;
+    background-color: tan;
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    grid-template-rows: repeat(3,100px);
+    /* We can also use below code for arraging the positions */
+    grid-template-areas: 
+    "a b c"
+    "a b c"
+    "a d e";
+
+
+    
+    /* here in grid-area we select the box in the parent div like first row/ first column/last row/last column */
+}
+/* .gridusing > div{
+   height: 100px;
+    width: 100px; 
+
+} */
+.gridusing > div:nth-child(1){
+    background-color: rgb(189, 74, 74);
+    /* changing element from first position to 4 position */
+    /* The element will not interchange positions it just get ther and shift all elements */
+    /* grid-area:2/2/3/3 ; */
+    grid-area: a;
+
+}
+.gridusing > div:nth-child(2){
+    background-color: lightgrey;
+    grid-area: b;
+
+}
+.gridusing > div:nth-child(3){
+    background-color: rgb(137, 207, 216);
+    grid-area: c;
+
+}
+.gridusing > div:nth-child(4){
+    background-color: rgb(150, 218, 147);
+    grid-area: d;
+
+}
+.gridusing > div:nth-child(5){
+    background-color: rgb(225, 152, 203);
+    grid-area: e;
+    /* This is a another method of using grid-area and with grid-templete-area */
+
+}
+/* here in grid-area we select the box in the parent div like first row/ first column/last row/last column */

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <hr>
+        <button id="val">Click here to find the exponent!</button>
+    </div>
+</body>
+</html>
+<script>
+    
+    // console.log(Number(num1)+" "+num2)
+
+    document.querySelector("#val").addEventListener("click", resultFun);
+
+    function resultFun(){
+        let num1=document.querySelector("#num1").value;
+    let num2=document.querySelector("#num2").value;
+        let sum=Number(num1);
+        console.log(Number(num1));
+        for(let i=1;i<num2;i++){
+            sum*=Number(num1);
+        }
+        alert("This is the power of given numbers "+ sum);
+    }
+</script>

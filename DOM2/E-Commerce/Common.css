@@ -1,0 +1,28 @@
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(8, 8, 50);
+    margin-top: 15px;
+    border-radius: 25px;
+    padding: 5px;
+    
+    
+}
+#topbar >li {
+    display: flex;
+    margin-left: 25px;
+    margin-right: 50px;
+   
+    
+}
+ul >a {
+    text-decoration: none;
+    color: white;
+}
+
+#centerText{
+    font-size: 50px;
+    text-align: center;
+    word-spacing: 12px;
+    margin-top: 200px;
+}

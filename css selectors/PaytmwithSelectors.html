@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paytm box model with Selectors in css</title>
+    <style>
+        #outer{
+            height: 800px;
+            width: 100%;
+            border: 1px solid black;
+            display: block;
+        }
+        .inner{
+            height: 400px;
+            width: 100%;
+            border: 1px solid red;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #color1{
+            background-color: rgb(0, 185, 241);
+        }
+        #color2{
+            background-color: rgb(36, 69, 116);
+           
+
+        }
+        h1{
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .inner > div{
+            padding-left: 110px;
+            
+        }
+        .heading{ 
+            padding-top: 30px;
+            
+        }
+        .inneroptions  img{
+            width: 75px;
+        }
+       .inneroptions{
+        width: 150px;
+        height: 200px;
+        /* border: 1px solid black; */
+        padding-left: 15px;
+        padding-top: 15px;
+        border-radius: 10px;
+       }
+       .inneroptions:hover{
+        box-shadow: rgba(1, 165, 215, 0.707) 60px 60px 60px 80px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        
+       }
+       h2{
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 2px;
+       }
+       .service h2{
+        
+        margin-top: 2px;
+        font-weight: bold;
+        font-size: 19px;
+       }
+       .options{
+        display: flex;
+        height: 250px ;
+        width: 100%;
+       
+        gap: 40px;
+
+       }
+       .inneroptions2  img{
+            width: 75px;
+        }
+       .inneroptions2{
+        width: 150px;
+        height: 200px;
+        /* border: 1px solid black; */
+        padding-left: 15px;
+        padding-top: 15px;
+        border-radius: 10px;
+       }
+       .inneroptions2:hover{
+        box-shadow: rgb(21, 62, 119) 60px 60px 60px 80px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        
+       }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div class="inner" id="color1">
+            <div class="heading">
+                <h1>Recharge & Pay Bills on Paytm</h1>
+            </div>
+            <div class="options">
+                    <div class="inneroptions">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/733299/1626251017535.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/733311/1626251101045.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/733296/1626259884425.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/733307/1626251127863.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/1269194/1672827522093.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/1269198/1672828917034.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/757701/1626268580682.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="inner" id="color2">
+            <div class="heading">
+                <h1>Books & Buy on Paytm</h1>
+            </div>
+            <div class="options">
+                    <div class="inneroptions2">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/733295/1626259710574.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions2">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/733296/1626259884425.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions2">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/733311/1626251101045.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions2">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/729997/1696910636390.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions2">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/729998/1666185237748.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions2">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/729999/1626259968563.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+                    <div class="inneroptions2">
+                        <div class="imagebox">
+                            <img src="https://assetscdn1.paytm.com/images/catalog/view_item/730001/1626450848003.png" alt="mobile recharge">
+                        </div>
+                        <div>
+                           <h2>Recharge</h2> 
+                        </div>
+                        <div class="service">
+                            <div>
+                               <h2>Prepaid</h2> 
+                            </div>
+                            <div>
+                                <h2>Mobile ></h2> 
+                                
+                             </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

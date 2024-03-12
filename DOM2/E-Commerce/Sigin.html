@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="./Common.css">
+    <link rel="stylesheet" href="./Sigin.css">
+</head>
+<body>
+    <div id="topbar">
+        <li>
+            <ul> <a href="./index.html">
+                Rebook
+            </a>
+            </ul>
+        </li>
+        <li>
+            <ul><a href="./men.html">Men</a></ul>
+            <ul><a href="./women.html">Women</a></ul>
+            <ul><a href="./Login.html">Login</a></ul>
+            <ul><a href="./Sigin.html">Sigin</a></ul>
+        </li>
+        
+    </div>
+    <div id="RegisterForm">
+        <form id="SiginForm">
+            <h1>Ready to Rock</h1>
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="text" id="email" placeholder="Enter Email">
+            <input type="date" id="dateOfBirth">
+            <input type="password" id="password" placeholder="Enter password">
+            <input type="password" id="Cpassword" placeholder="Confirm password">
+            <input type="submit" id="submit">
+        </form>
+        
+    </div>
+    
+</body>
+</html>
+<script>
+    document.querySelector("#SiginForm").addEventListener("submit", registerFun);
+    
+    function registerFun(){
+        event.preventDefault();
+        
+       let password=document.querySelector("#password").value;
+        let Cpassword=document.querySelector("#Cpassword").value;
+        console.log(password+" "+Cpassword);
+        if(password===Cpassword){
+        let obj={
+            name:document.querySelector("#name").value,
+            email:document.querySelector("#email").value,
+            DOB:document.querySelector("#dateOfBirth").value,
+            pass1:Cpassword
+            
+        };
+        let arr=[];
+        arr.push(obj);
+        localStorage.setItem("RegisterData", JSON.stringify(arr));
+        window.location.href="login.html"
+        
+    }
+    else{
+        let h3tag=document.createElement("h3");
+        h3tag.innerText="Password and confirm password doesn't match!!"
+        let RegDiv=document.querySelector("#SiginForm");
+        RegDiv.append(h3tag);
+    }
+    }
+</script>

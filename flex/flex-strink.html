@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex strink</title>
+    <style>
+         .adjust{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            
+        }
+        .adjust > div{
+            height: 100px;
+            width: 100px;
+        }
+        .adjust > div:nth-child(even){
+            background-color: lightcoral;
+        }
+        .adjust > div:nth-child(odd){
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="adjust">
+        <div class="item1">1</div> 
+        <!-- flex-strink will decrease the element size when the screen size decrease the 
+            element which is mentioned that will decrese the size first as per the  priority -->
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+    </div>
+</body>
+</html>

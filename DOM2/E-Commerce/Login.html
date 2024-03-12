@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./Common.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div id="topbar">
+        <li>
+            <ul> <a href="./index.html">
+                Rebook
+            </a>
+            </ul>
+        </li>
+        <li>
+            <ul><a id="men" href="">Men</a></ul>
+            <ul><a id="women" href="">Women</a></ul>
+            <ul><a href="./Login.html">Login</a></ul>
+            <ul><a href="./Sigin.html">Sigin</a></ul>
+        </li>
+        
+    </div>
+    <div id="Login">
+        <form id="LoginForm">
+            <h1>Login faster for fun</h1>
+            
+            <input type="text" id="email" placeholder="Enter Email">
+            
+            <input type="password" id="password" placeholder="Enter password">
+           
+            <input type="submit" id="submit">
+        </form>
+
+    </div>
+    
+</body>
+</html>
+<script>
+    
+        let data= JSON.parse(localStorage.getItem("RegisterData"));
+        document.querySelector("#LoginForm").addEventListener("submit",loginFun);
+
+        function loginFun(){
+            event.preventDefault();
+            let email=document.querySelector("#email").value;
+            let pass=document.querySelector("#password").value;
+            data.forEach(function(element){
+               if( element.email===email){
+                if(element.pass1===pass){
+                    localStorage.setItem  ("authentication",JSON.parse(true));
+                }
+                else{
+                    localStorage.setItem  ("authentication",JSON.parse(false));
+                    console.log("Password is wrong");
+                }
+               }
+               else{
+                localStorage.setItem  ("authentication",JSON.parse(false));
+                console.log("User not found");
+                window.location.href="Sigin.html"
+               }
+                
+            })
+        }
+        document.querySelector("#men").addEventListener("click",menAccessFun);
+        document.querySelector("#women").addEventListener("click",womenAccessFun);
+       function menAccessFun(){
+        let access=JSON.parse(localStorage.getItem("authentication"));
+        console.log(access);
+        let menAncar=document.querySelector("#men");
+        if(access){
+         
+                menAncar.setAttribute("href","men.html")
+        }
+        else{
+            menAncar.setAttribute("href","Login.html")
+        }
+       }
+
+       function womenAccessFun(){
+        let access=JSON.parse(localStorage.getItem("authentication"));
+        console.log(access);
+        let womenAncar=document.querySelector("#women");
+        if(access){
+         
+                womenAncar.setAttribute("href","women.html")
+        }
+        else{
+            womenAncar.setAttribute("href","Login.html")
+        }
+       }
+
+</script>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model for movie list</title>
+    <style>
+        #fullDiv{
+            height: 1350px;
+            width: 1620px;
+            /* border: 1px solid black; */
+        }
+        #halfDiv{
+            height: 674px;
+            width: 1410px;
+            /* border: 1px solid blueviolet; */
+            /* border-collapse: collapse; */
+            padding-left: 90px;
+            padding-right: 120px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            display: inline-block; 
+            
+        }
+        #secHalfDiv{
+            height: 674px;
+            width: 1410px;
+            /* border: 1px solid blueviolet; */
+            /* border-collapse: collapse; */
+            padding-left: 90px;
+            padding-right: 120px;
+            padding-bottom: 10px;
+            display: inline-block; 
+        }
+        
+        #halfDiv> div{
+            height: 674px;
+            width: 445px;
+            /* border: 1px solid yellow; */
+            display: inline-block;
+            margin-right: 10px;
+            
+        }
+        #secHalfDiv> div{
+            height: 674px;
+            width: 445px;
+            /* border: 1px solid yellow; */
+            display: inline-block;
+            margin-right: 10px;
+            
+        }
+        #photo{
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            height: 674px;
+            width: 445px;    
+        }
+        #photo > img{
+            height: 470px;
+            width: 445px;
+            /* border: 1px solid red; */
+            padding-bottom: 30px;
+
+           
+        }
+        h2{
+            font-weight: bolder;
+            font-size: 27px;
+        }
+        p{
+            font-size: 18px;
+        }
+        .textInside{
+            text-align: center;
+        }
+        .booknow{
+            background-color: #81d4fa;
+            border: 1px solid #81d4fa;
+            margin-inline:auto ;
+            cursor: pointer;
+            color: black;
+            font-size: 15px;
+            /* font-weight: bold; */
+            /* border-radius: 5px; */
+            display: inline-block; 
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            /* margin-top: 20px; */
+            
+        }
+ 
+        .booknow:hover{
+            background-color: rgb(207, 78, 64);
+            color: white;
+            border: 1px solid white
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="fullDiv">
+        <div id="halfDiv">
+            <div>
+             <div id="photo">
+                <img src="https://assetscdn1.paytm.com/images/cinema/Doctor-Strange--In-The-Multiverse-Of-Madness-r-705x750-36f0e140-b752-11ec-a762-319bdb0970f2.jpg" alt="Doctor Strange">
+                <div class="textInside">
+                <h2>Doctor Strange 2</h2>
+                <p>Rating:- 4.5</p>
+                <button  class="booknow">Book now</button>
+            </div>
+             </div>
+            </div>
+            <div>
+                <div id="photo">
+                   <img src="https://assetscdn1.paytm.com/images/cinema/bb2--705x750-cbc15240-8a94-11ec-8efd-6d205f33f529.jpg" alt="Doctor Strange">
+                   <div class="textInside">
+                   <h2>Bhool Bhulaiyaa 2</h2>
+                   <p>Rating:- 4.5</p>
+                   <button  class="booknow">Book now</button>
+                </div>
+                </div>
+               </div>
+               <div>
+                <div id="photo">
+                   <img src="https://assetscdn1.paytm.com/images/cinema/Jayeshbhai-Jordaar---705x750-660c01c0-cf7c-11ec-98b3-41c37f260d1c.jpg" alt="Doctor Strange">
+                   <div class="textInside">
+                   <h2>Jayeshbhai Jordaar</h2>
+                   <p>Rating:- 4.5</p>
+                   <button  class="booknow">Book now</button>
+                   </div>
+                </div>
+               </div>
+        </div>
+        <div id="secHalfDiv" >
+            <div>
+                <div id="photo">
+                   <img src="https://assetscdn1.paytm.com/images/cinema/Jurassic-World--Dominion-705x750-b554ee90-cd51-11ec-8d22-2363945d80ef.jpg" alt="Doctor Strange">
+                   <div class="textInside">
+                   <h2>Jurasic World</h2>
+                   <p>Rating:- 4.5</p>
+                   <button  class="booknow">Book now</button>
+                   </div>
+                </div>
+            </div>
+               <div>
+                   <div id="photo">
+                      <img src="https://assetscdn1.paytm.com/images/cinema/KGF-705x750-76008750-b6fd-11ec-9639-8322852eadd4.jpg" alt="Doctor Strange">
+                      <div class="textInside">
+                      <h2>KGF2</h2>
+                      <p>Rating:- 4.5</p>
+                      <button  class="booknow">Book now</button>
+                      </div>
+                   </div>
+                </div>
+                <div>
+                   <div id="photo">
+                      <img src="https://assetscdn1.paytm.com/images/cinema/RRR-North-705x750-fd78d9c0-693d-11ec-bbcd-5d122dc4018b.jpg" alt="Doctor Strange">
+                      <div class="textInside">
+                      <h2>RRR</h2>
+                      <p>Rating:- 4.5</p>
+                      <button  class="booknow">Book now</button>
+                      </div>
+                   </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

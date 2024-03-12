@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+    <link rel="stylesheet" href="./Common.css">
+</head>
+<body>
+    <div id="topbar">
+        <li>
+            <ul> <a href="./index.html">
+                Rebook
+            </a>
+            </ul>
+        </li>
+        <li>
+            <ul><a id="men" href="">Men</a></ul>
+            <ul><a href="./women.html">Women</a></ul>
+            <ul><a id="logout" href="./Logout.html">Log out</a></ul>
+            <!-- <ul><a href="./Sigin.html">Sigin</a></ul> -->
+        </li>
+        
+    </div>
+    
+</body>
+</html>
+<script>document.querySelector("#logout").addEventListener("click",logoutFun);
+
+    function logoutFun(){
+    localStorage.setItem("authentication", JSON.stringify(false));
+    window.location.href="login.html"
+    }
+
+    document.querySelector("#men").addEventListener("click",menAccessFun);
+    function menAccessFun(){
+        let access=JSON.parse(localStorage.getItem("authentication"));
+        console.log(access);
+        let menAncar=document.querySelector("#men");
+        if(access){
+        
+                menAncar.setAttribute("href","men.html")
+        }
+        else{
+            menAncar.setAttribute("href","Login.html")
+        }
+       }
+    </script>

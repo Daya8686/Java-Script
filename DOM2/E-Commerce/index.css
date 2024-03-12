@@ -1,0 +1,19 @@
+#centerText {
+    height: 690px;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230718/pngtree-digital-retailing-illustration-laptop-keyboard-with-shopping-basket-and-e-commerce-image_3903657.jpg);
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+    margin-top: 10px;
+    margin: auto;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+#centerText >p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   display: flex;
+   justify-content: center;
+   margin-right: 425px;
+   color: white;
+}

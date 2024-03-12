@@ -1,0 +1,27 @@
+.gridusing{
+        background-color: black;
+        height: 500px;
+        width: 500px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2, 1fr);
+        /* gap: 10px,20px; */
+        
+        }
+.gridusing > div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+   margin-left: 20px;
+    height:50px ;
+    width: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridusing >  div:nth-child(even){
+    background-color: lightcoral;
+}
+.gridusing > div:nth-child(odd){
+    background-color: lightblue;
+}

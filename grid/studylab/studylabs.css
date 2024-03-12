@@ -1,0 +1,51 @@
+.header{
+    height: 60px;
+    /* border: 1px slateblue solid; */
+    width: 100%;
+    top: 0;
+    position:sticky;  
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    
+   
+}
+.headerinfo{
+    width: 70%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    /* justify-content: space-between; */
+    /* row-gap: 100px; */
+    /* border: 1px saddlebrown solid; */
+    column-gap: 400px;
+}
+/* .headerinfo1{
+    display: flex;
+    justify-content: start;
+    margin-right: 1000px;
+    
+} */
+
+#studylab > h1{
+    margin: 0px;
+    margin-top: 0px;
+    margin-left: 10px;
+    padding: 12px;
+    background: linear-gradient(110deg, #cc3bfd 60%, #4369f4 60%);
+    
+}
+.headerinfo2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin-top: 20px;
+    margin-right: 150px;
+}
+.headerinfo2 > div {
+    font-size: 18px;
+    font-weight: bold;
+}
+#demo{
+    height: 1000px;
+    width: 800px;
+    border: 1px saddlebrown solid;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            height: 5000px;
+            width: 20%;
+            border-block-end-color: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+
+            
+
+        }
+        .flex > div{
+            height: 100px;
+            width: 100px;
+            
+        }
+        .flex > div:nth-child(even){
+            background-color: lightcoral;
+        }
+        .flex > div:nth-child(odd){
+            background-color: rgb(128, 162, 240);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+    </div>
+</body>
+</html>
